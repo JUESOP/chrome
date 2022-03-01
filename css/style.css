@@ -14,4 +14,23 @@ img {
     opacity:80%;
     }
 
-.    
+#clock {
+    text-align: center;
+    font-size: 150px;
+    color: black;
+}   
+
+#weather {
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+#greeting {
+    text-align: center;
+    font-size: 50px;
+}
+
+.input1 {
+    text-align: center;
+}
