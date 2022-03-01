@@ -23,7 +23,7 @@ function handleToDoSubmit(event) {
 }
 
 function paintToDo(newTodo) {
-    const li = document.createElement("li");
+    const li = document.createElement("li"); //todo list의 li
     li.id = newTodo.id;
     const span = document.createElement("span");
     span.innerText = newTodo.text;
@@ -36,13 +36,14 @@ function paintToDo(newTodo) {
 }
 
 function deleteToDo(event) {
-    const li = event.target.parentNode;
-    li.remove();
-    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    const li = event.target.parentNode; // x버튼의 부모 노드 
+    li.remove(); //눈에 보이는거에서 삭제
+    toDos = toDos.filter((potato) => potato.id !== parseInt(li.id));
     saveToDos();
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
 const savedToDos = localStorage.getItem(TODOS_KEY); //가지고 오는것
 
 if (savedToDos !== null) { //값이 있다
